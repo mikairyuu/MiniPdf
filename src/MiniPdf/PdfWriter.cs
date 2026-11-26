@@ -1146,7 +1146,7 @@ internal sealed class PdfWriter
                 // Skip stroke simulation when a dedicated bold font variant is available.
                 if (block.Bold && !hasBoldFontVariant && !hasBoldItalicFontVariant)
                 {
-                    var strokeW = (block.FontSize * 0.03f).ToString("F2", CultureInfo.InvariantCulture);
+                    var strokeW = (block.FontSize * 0.15f).ToString("F2", CultureInfo.InvariantCulture);
                     sb.Append($"{strokeW} w\n");       // stroke width
                     sb.Append(colorCmd.TrimEnd('\n').Replace(" rg", " RG"));
                     sb.Append("\n");
