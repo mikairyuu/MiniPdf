@@ -2726,7 +2726,7 @@ internal static class ExcelReader
         var lowerFmt = activeFormat.ToLowerInvariant();
         if (lowerFmt.Contains("yy") || lowerFmt.Contains("dd") ||
             (lowerFmt.Contains("mm") && (lowerFmt.Contains("dd") || lowerFmt.Contains("yy") || lowerFmt.Contains("hh") || lowerFmt.Contains("ss"))) ||
-            lowerFmt.Contains("mmm") ||
+            lowerFmt.Contains("mmm") || lowerFmt.Contains("m/d") || lowerFmt.Contains("d/m") ||
             lowerFmt.Contains("hh") || lowerFmt.Contains("h:") || lowerFmt.Contains("am/pm") || lowerFmt.Contains("a/p"))
         {
             return FormatExcelDate(value, activeFormat);
